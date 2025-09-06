@@ -47,6 +47,7 @@
           <ul class="nav-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#game">Game</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -87,6 +88,19 @@
             <h2>Deploy</h2>
             <p>Drop these files into a GitHub repo and enable GitHub Pages. Relative asset paths make it work at <code>/REPO/</code> or a custom domain.</p>
           </div>
+        </div>
+      </section>
+
+      <section id="game" class="section">
+        <div class="container">
+          <h2>Guess the Number</h2>
+          <p>Pick a number between 1 and 10:</p>
+          <div class="game-controls">
+            <input type="number" id="guess-input" min="1" max="10" />
+            <button id="guess-button">Guess</button>
+            <button id="reset-button" hidden>Play again</button>
+          </div>
+          <p id="game-message" class="muted" aria-live="polite"></p>
         </div>
       </section>
 

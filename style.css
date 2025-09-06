@@ -102,6 +102,9 @@ nav { margin-left: auto; }
 .btn:hover { filter: brightness(1.05); }
 .btn:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
 
+/* Mini game */
+.game-controls { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+
 /* Footer */
 .site-footer { padding: 1rem 0; border-top: 1px solid rgba(0,0,0,.06); margin-top: 2rem; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
