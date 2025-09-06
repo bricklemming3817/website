@@ -46,10 +46,10 @@
   }
 
   function setupLifecycle(){
-    const rail = document.querySelector('#skills .rail');
+    const rail = document.querySelector('#how-i-work .rail');
     if(!rail) return;
     const tabs = Array.from(rail.querySelectorAll('[role="tab"]'));
-    const panels = Array.from(document.querySelectorAll('#skills [role="tabpanel"]'));
+    const panels = Array.from(document.querySelectorAll('#how-i-work [role="tabpanel"]'));
 
     const ids = tabs.map(t=>t.id.replace('tab-',''));
     function activate(id){
