@@ -88,28 +88,28 @@ section { padding:64px 16px; max-width:var(--maxw); margin:0 auto; scroll-margin
 .skills .card ul { padding-left:20px; }
 
 /* Lifecycle rail */
-#skills{
+#how-i-work{
   background:var(--bg);
   color:var(--fg);
 }
-#skills .rail{display:none;border-bottom:1px solid var(--border);margin-bottom:24px;}
-.js #skills .rail{display:flex;justify-content:space-between;}
-#skills .rail button{flex:1;background:none;border:none;padding:8px 0;font-size:clamp(14px,1.6vw,16px);cursor:pointer;color:inherit;font-family:inherit;}
-#skills .rail button[aria-selected="true"]{border-bottom:2px solid var(--accent);color:var(--accent);}
-#skills .rail button:focus{outline:2px solid var(--accent);outline-offset:2px;}
-#skills .rail-panels>section{margin-top:24px;}
-.js #skills .rail-panels>section{display:none;}
-.js #skills .rail-panels>section.is-active{display:block;}
-#skills .chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:16px 0;}
-#skills .chips li{list-style:none;border:1px solid var(--border);border-radius:9999px;padding:4px 10px;font-size:14px;}
-#skills .chips.skills li{color:var(--muted);}
-#skills .chips.kpis li{color:var(--accent);}
-#skills .artifact{margin-top:16px;}
-#skills .artifact a+a{margin-left:8px;}
-#skills .chip-link{border:1px solid var(--accent);border-radius:9999px;padding:4px 10px;text-decoration:none;}
-#skills .chip-link:hover{background:var(--accent);color:var(--bg);}
+#how-i-work .rail{display:none;border-bottom:1px solid var(--border);margin-bottom:24px;}
+.js #how-i-work .rail{display:flex;justify-content:space-between;}
+#how-i-work .rail button{flex:1;background:none;border:none;padding:8px 0;font-size:clamp(14px,1.6vw,16px);cursor:pointer;color:inherit;font-family:inherit;}
+#how-i-work .rail button[aria-selected="true"]{border-bottom:2px solid var(--accent);color:var(--accent);}
+#how-i-work .rail button:focus{outline:2px solid var(--accent);outline-offset:2px;}
+#how-i-work .rail-panels>section{margin-top:24px;}
+.js #how-i-work .rail-panels>section{display:none;}
+.js #how-i-work .rail-panels>section.is-active{display:block;}
+#how-i-work .chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:16px 0;}
+#how-i-work .chips li{list-style:none;border:1px solid var(--border);border-radius:9999px;padding:4px 10px;font-size:14px;}
+#how-i-work .chips.skills li{color:var(--muted);}
+#how-i-work .chips.kpis li{color:var(--accent);}
+#how-i-work .artifact{margin-top:16px;}
+#how-i-work .artifact a+a{margin-left:8px;}
+#how-i-work .chip-link{border:1px solid var(--accent);border-radius:9999px;padding:4px 10px;text-decoration:none;}
+#how-i-work .chip-link:hover{background:var(--accent);color:var(--bg);}
 @media (prefers-reduced-motion: no-preference){
-  .js #skills .rail-panels>section.is-active{animation:fade .15s ease;}
+  .js #how-i-work .rail-panels>section.is-active{animation:fade .15s ease;}
 }
 @keyframes fade{from{opacity:0;transform:translateY(5px);}to{opacity:1;transform:translateY(0);}}
 
