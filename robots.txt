@@ -1,0 +1,6 @@
+# Allow all crawling; update Sitemap URL after deploying
+User-agent: *
+Allow: /
+
+Sitemap: ./sitemap.xml
+

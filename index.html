@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VibeCoding — Minimal, Fast, and Accessible</title>
+    <meta name="description" content="A minimalist, mobile‑first static site. Fast, accessible, and deployable on GitHub Pages." />
+
+    <!-- Canonical: update to your actual pages URL (see README) -->
+    <link rel="canonical" href="https://username.github.io/repo/" />
+
+    <!-- Icons -->
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./assets/favicon.png" sizes="any" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <meta name="theme-color" content="#2e7d32" />
+
+    <!-- Open Graph / Twitter (update fields in README as needed) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="VibeCoding — Minimal, Fast, and Accessible" />
+    <meta property="og:description" content="A minimalist, mobile‑first static site. Fast, accessible, and deployable on GitHub Pages." />
+    <meta property="og:image" content="./assets/icon-512.png" />
+    <meta property="og:url" content="https://username.github.io/repo/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VibeCoding — Minimal, Fast, and Accessible" />
+    <meta name="twitter:description" content="A minimalist, mobile‑first static site." />
+    <meta name="twitter:image" content="./assets/icon-512.png" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Progressive enhancement hook: only hide nav on small screens when JS is available -->
+    <script>document.documentElement.classList.add('js')</script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="./" aria-label="VibeCoding home">
+          <img src="./assets/logo.svg" width="32" height="32" alt="VibeCoding logo" />
+          <span>VibeCoding</span>
+        </a>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+
+        <nav id="nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="home" class="hero">
+        <div class="container">
+          <h1>Minimalist. Fast. Accessible.</h1>
+          <p>Ship a clean, mobile‑first static site under 50KB with zero backend. Works great on GitHub Pages.</p>
+          <p>
+            <a class="btn" href="#about">Learn more</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container grid-2">
+          <div>
+            <h2>Purpose</h2>
+            <p>This template focuses on essentials: semantic HTML, lightweight CSS, tiny JS, and solid accessibility. It’s compatible with evergreen browsers and degrades gracefully.</p>
+          </div>
+          <div>
+            <h2>Design</h2>
+            <p>Minimal layout with a single accent color and a crisp system font stack. Dark mode included via prefers‑color‑scheme.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid-2">
+          <div>
+            <h2>Performance</h2>
+            <p>No frameworks, no blocking fonts, SVG where possible. Scripts are deferred and respect reduced motion preferences.</p>
+          </div>
+          <div>
+            <h2>Deploy</h2>
+            <p>Drop these files into a GitHub repo and enable GitHub Pages. Relative asset paths make it work at <code>/REPO/</code> or a custom domain.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>Questions or feedback? Email us at
+            <a href="mailto:hello@example.com">hello@example.com</a>.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <small>© <span id="year"></span> VibeCoding. All rights reserved.</small>
+        <a href="#top">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="./script.js" type="module" defer></script>
+  </body>
+  </html>
+

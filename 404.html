@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page Not Found — VibeCoding</title>
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="./style.css" />
+    <meta http-equiv="refresh" content="5; url=./" />
+  </head>
+  <body>
+    <main class="section" style="min-height: 60vh; display: grid; place-items: center; text-align:center;">
+      <div class="container">
+        <h1>404 — Page Not Found</h1>
+        <p class="muted">You’ll be redirected to the homepage shortly.</p>
+        <p><a class="btn" href="./">Go to homepage</a></p>
+      </div>
+    </main>
+
+    <script>
+      // SPA-friendly redirect for GitHub Pages: send unknown paths back to the root
+      (function(){
+        var isGhPages = location.hostname.endsWith('.github.io');
+        if (isGhPages) {
+          var base = location.pathname.split('/').slice(0, -1).join('/') + '/';
+          if (base && base !== '/') location.replace(base);
+        }
+      })();
+    </script>
+  </body>
+  </html>
+
