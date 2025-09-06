@@ -1,0 +1,64 @@
+{
+  "owner": {
+    "name": "Kevin Varghese",
+    "title": "Business / Data / Systems Analyst",
+    "location": "Toronto, Canada",
+    "email": "kevin@example.com",
+    "phone": "+1-XXX-XXX-XXXX",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/...",
+      "github": "https://github.com/kevin...",
+      "x": "https://x.com/kevin..."
+    },
+    "value_prop": "Turns messy processes into measurable outcomes."
+  },
+  "highlights": [
+    "ECBA-certified Business Analyst",
+    "Agile SDLC, QA/UAT, change logs",
+    "SQL, Python (pandas), Tableau, Excel/Power Query",
+    "A/B testing with power analysis",
+    "Stakeholder-ready dashboards and docs"
+  ],
+  "projects": [
+    {
+      "slug": "fintech-ab-test",
+      "name": "A/B Testing — Onboarding",
+      "year": 2024,
+      "summary": "Stat-rigorous test improved first-week engagement.",
+      "impact": ["~5% lift (p < 0.001)", "Dashboard readouts", "Rollout playbook"],
+      "tags": ["A/B Test","Analytics","Experiment Design","Dashboard"],
+      "hero": "/assets/img/ab-hero.jpg",
+      "links": {"doc": "/assets/docs/ab-readout.pdf"}
+    },
+    {
+      "slug": "telco-churn",
+      "name": "Churn Prediction (SaaS)",
+      "year": 2024,
+      "summary": "Logistic model to target retention outreach.",
+      "impact": ["ROC-AUC ~0.76", "Driver insights"],
+      "tags": ["ML","EDA","Logistic Regression"],
+      "hero": "/assets/img/churn-hero.jpg",
+      "links": {"doc": "/assets/docs/churn-summary.pdf"}
+    },
+    {
+      "slug": "claims-redesign",
+      "name": "Claims System Redesign",
+      "year": 2024,
+      "summary": "As-Is/To-Be, validations, and portal prototype.",
+      "impact": ["Cycle-time target 30–40%↓", "Error reduction goals"],
+      "tags": ["Systems Analysis","UX","Process Mapping"],
+      "hero": "/assets/img/claims-hero.jpg",
+      "links": {"doc": "/assets/docs/claims-redesign.pdf"}
+    }
+  ],
+  "skills": {
+    "core": ["BRD/Requirements","BPMN Process Maps","User Stories & AC","UAT & Defect Triage","Change Management"],
+    "data": ["SQL","Python (pandas)","Excel/Power Query","Tableau","Experimentation"],
+    "tools": ["JIRA","Confluence","Figma","Lucidchart","Visio","GitHub"],
+    "methods": ["Agile/Scrum","KPI Design","Data Quality","Root-Cause Analysis"]
+  },
+  "resume": {
+    "pdf": "/assets/kevin-varghese-resume.pdf",
+    "last_updated": "2025-09-01"
+  }
+}
