@@ -6,7 +6,7 @@
     "email": "kevin@example.com",
     "phone": "+1-XXX-XXX-XXXX",
     "links": {
-      "linkedin": "https://www.linkedin.com/in/...",
+      "linkedin": "https://www.linkedin.com/in/kevin-varghese/",
       "github": "https://github.com/kevin...",
       "x": "https://x.com/kevin..."
     },
@@ -27,8 +27,8 @@
       "summary": "Stat-rigorous test improved first-week engagement.",
       "impact": ["~5% lift (p < 0.001)", "Dashboard readouts", "Rollout playbook"],
       "tags": ["A/B Test","Analytics","Experiment Design","Dashboard"],
-      "hero": "/assets/img/ab-hero.jpg",
-      "links": {"doc": "/assets/docs/ab-readout.pdf"}
+      "hero": "./assets/img/ab-hero.jpg",
+      "links": {"doc": "./assets/docs/ab-readout.pdf"}
     },
     {
       "slug": "telco-churn",
@@ -37,8 +37,8 @@
       "summary": "Logistic model to target retention outreach.",
       "impact": ["ROC-AUC ~0.76", "Driver insights"],
       "tags": ["ML","EDA","Logistic Regression"],
-      "hero": "/assets/img/churn-hero.jpg",
-      "links": {"doc": "/assets/docs/churn-summary.pdf"}
+      "hero": "./assets/img/churn-hero.jpg",
+      "links": {"doc": "./assets/docs/churn-summary.pdf"}
     },
     {
       "slug": "claims-redesign",
@@ -47,8 +47,8 @@
       "summary": "As-Is/To-Be, validations, and portal prototype.",
       "impact": ["Cycle-time target 30–40%↓", "Error reduction goals"],
       "tags": ["Systems Analysis","UX","Process Mapping"],
-      "hero": "/assets/img/claims-hero.jpg",
-      "links": {"doc": "/assets/docs/claims-redesign.pdf"}
+      "hero": "./assets/img/claims-hero.jpg",
+      "links": {"doc": "./assets/docs/claims-redesign.pdf"}
     }
   ],
   "skills": {
@@ -65,7 +65,7 @@
         "summary": "Understand the problem, users, and constraints.",
         "skills": ["stakeholder interviews", "requirements elicitation", "data profiling", "KPI framing"],
         "kpis": ["clear problem statement", "stakeholder alignment"],
-        "artifact": {"label": "discovery brief", "href": "/assets/docs/discovery-brief.pdf"},
+        "artifact": {"label": "discovery brief", "href": "./assets/docs/discovery-brief.pdf"},
         "project_ref": "claims-redesign"
       },
       {
@@ -74,7 +74,7 @@
         "summary": "Specify what to build and how to measure success.",
         "skills": ["BRD & user stories", "acceptance criteria", "process mapping (BPMN)"],
         "kpis": ["zero-ambiguity handoffs", "traceability in change log"],
-        "artifact": {"label": "BRD sample", "href": "/assets/docs/brd-sample.pdf"},
+        "artifact": {"label": "BRD sample", "href": "./assets/docs/brd-sample.pdf"},
         "project_ref": "claims-redesign"
       },
       {
@@ -83,7 +83,7 @@
         "summary": "Prototype, model, and instrument for insight.",
         "skills": ["SQL & pandas", "dashboarding (Tableau)", "rapid prototyping"],
         "kpis": ["insight-to-action pipeline", "exec-ready visuals"],
-        "artifact": {"label": "dashboard snapshot", "href": "/assets/docs/dashboard.pdf"},
+        "artifact": {"label": "dashboard snapshot", "href": "./assets/docs/dashboard.pdf"},
         "project_ref": "telco-churn"
       },
       {
@@ -92,7 +92,7 @@
         "summary": "De-risk with tests and experiments.",
         "skills": ["UAT & defect triage", "test cases", "A/B testing (power, t-tests)"],
         "kpis": ["+5% engagement (p<0.001)", "12 defects blocked pre–go-live"],
-        "artifact": {"label": "A/B readout", "href": "/assets/docs/ab-readout.pdf"},
+        "artifact": {"label": "A/B readout", "href": "./assets/docs/ab-readout.pdf"},
         "project_ref": "fintech-ab-test"
       },
       {
@@ -101,13 +101,13 @@
         "summary": "Roll out with clarity and measurable outcomes.",
         "skills": ["exec readouts", "change logs", "rollout playbook"],
         "kpis": ["cycle-time target 30–40%↓", "errors <1%"],
-        "artifact": {"label": "exec deck", "href": "/assets/docs/exec-deck.pdf"},
+        "artifact": {"label": "exec deck", "href": "./assets/docs/exec-deck.pdf"},
         "project_ref": "claims-redesign"
       }
     ]
   },
   "resume": {
-    "pdf": "/assets/kevin-varghese-resume.pdf",
+    "pdf": "./assets/kevin-varghese-resume.pdf",
     "last_updated": "2025-09-01"
   }
 }
