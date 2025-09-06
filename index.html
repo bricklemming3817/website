@@ -1,126 +1,68 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>VibeCoding — Minimal, Fast, and Accessible</title>
-    <meta name="description" content="A minimalist, mobile‑first static site. Fast, accessible, and deployable on GitHub Pages." />
-
-    <!-- Canonical: update to your actual pages URL (see README) -->
-    <link rel="canonical" href="https://username.github.io/repo/" />
-
-    <!-- Icons -->
-    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="./assets/favicon.png" sizes="any" />
-    <link rel="manifest" href="./site.webmanifest" />
-    <meta name="theme-color" content="#ec4899" />
-
-    <!-- Open Graph / Twitter (update fields in README as needed) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="VibeCoding — Minimal, Fast, and Accessible" />
-    <meta property="og:description" content="A minimalist, mobile‑first static site. Fast, accessible, and deployable on GitHub Pages." />
-    <meta property="og:image" content="./assets/icon-512.png" />
-    <meta property="og:url" content="https://username.github.io/repo/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="VibeCoding — Minimal, Fast, and Accessible" />
-    <meta name="twitter:description" content="A minimalist, mobile‑first static site." />
-    <meta name="twitter:image" content="./assets/icon-512.png" />
-
-    <link rel="stylesheet" href="./style.css" />
-
-    <!-- Progressive enhancement hook: only hide nav on small screens when JS is available -->
-    <script>document.documentElement.classList.add('js')</script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <header class="site-header" id="top">
-      <div class="container header-inner">
-        <a class="brand" href="./" aria-label="VibeCoding home">
-          <img src="./assets/logo.svg" width="32" height="32" alt="VibeCoding logo" />
-          <span>VibeCoding</span>
-        </a>
-
-        <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
-
-        <nav id="nav" aria-label="Primary">
-          <ul class="nav-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#game">Game</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kevin Varghese — Business / Data / Systems Analyst</title>
+  <meta name="description" content="Portfolio of Kevin Varghese, Business/Data/Systems Analyst in Toronto, Canada." />
+  <link rel="stylesheet" href="./css/main.css" />
+  <script defer src="./js/main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#home">Skip to content</a>
+  <header id="top">
+    <nav>
+      <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle theme">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+      <h1>Kevin Varghese</h1>
+      <p>Business / Data / Systems Analyst</p>
+      <p class="no-js">Enable JavaScript to load full content.</p>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div id="project-filters" class="chips"></div>
+      <div id="project-list" class="cards"></div>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div id="skills-columns" class="skills"></div>
+    </section>
+    <section id="resume">
+      <h2>Resume</h2>
+      <p id="resume-summary">Latest resume.</p>
+      <div class="resume-actions">
+        <a id="resume-html" href="#" class="btn">View HTML Resume</a>
+        <a id="resume-pdf" href="#" class="btn">Download PDF</a>
       </div>
-    </header>
-
-    <main id="main">
-      <section id="home" class="hero">
-        <div class="container">
-          <h1>Minimalist. Fast. Accessible.</h1>
-          <p>Ship a clean, mobile‑first static site under 50KB with zero backend. Works great on GitHub Pages.</p>
-          <p>
-            <a class="btn" href="#about">Learn more</a>
-          </p>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container grid-2">
-          <div>
-            <h2>Purpose</h2>
-            <p>This template focuses on essentials: semantic HTML, lightweight CSS, tiny JS, and solid accessibility. It’s compatible with evergreen browsers and degrades gracefully.</p>
-          </div>
-          <div>
-            <h2>Design</h2>
-            <p>Minimal layout with a single accent color and a crisp system font stack. Light theme only.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container grid-2">
-          <div>
-            <h2>Performance</h2>
-            <p>No frameworks, no blocking fonts, SVG where possible. Scripts are deferred and respect reduced motion preferences.</p>
-          </div>
-          <div>
-            <h2>Deploy</h2>
-            <p>Drop these files into a GitHub repo and enable GitHub Pages. Relative asset paths make it work at <code>/REPO/</code> or a custom domain.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="game" class="section">
-        <div class="container">
-          <h2>Guess the Number</h2>
-          <p>Pick a number between 1 and 10:</p>
-          <div class="game-controls">
-            <input type="number" id="guess-input" min="1" max="10" />
-            <button id="guess-button">Guess</button>
-            <button id="reset-button" hidden>Play again</button>
-          </div>
-          <p id="game-message" class="muted" aria-live="polite"></p>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <div class="container">
-          <h2>Contact</h2>
-          <p>Questions or feedback? Email us at
-            <a href="mailto:hello@example.com">hello@example.com</a>.</p>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <small>© <span id="year"></span> VibeCoding. All rights reserved.</small>
-        <a href="#top">Back to top</a>
-      </div>
-    </footer>
-
-    <script src="./script.js" type="module" defer></script>
-  </body>
-  </html>
-
+      <div id="resume-print" class="print-area" hidden></div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a id="contact-email" href="mailto:kevin@example.com">kevin@example.com</a></p>
+      <div class="contact-links" id="contact-links"></div>
+      <form id="contact-form" action="mailto:kevin@example.com" method="post" enctype="text/plain">
+        <label>Name <input type="text" name="name" required /></label>
+        <label>Email <input type="email" name="email" required /></label>
+        <label>Message <textarea name="message" maxlength="1000" required></textarea></label>
+        <button type="submit">Send</button>
+      </form>
+      <p id="contact-location"></p>
+    </section>
+  </main>
+  <footer id="footer">
+    <p>© <span id="year"></span> Kevin Varghese. Built for speed and accessibility.</p>
+    <ul id="footer-links" class="footer-links"></ul>
+  </footer>
+  <noscript><link rel="stylesheet" href="./css/no-js.css" /></noscript>
+</body>
+</html>
