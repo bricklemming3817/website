@@ -6,9 +6,10 @@ Minimalist, mobile‑first static site ready for GitHub Pages. No frameworks, no
 - Semantic HTML with proper landmarks and heading order
 - Mobile‑first layout, responsive typography (`clamp()`), CSS Grid/Flex
 - Accessible menu toggle with ARIA and keyboard support
-- Light theme only
+- Sci-fi dark theme with neon accents
 - Smooth scrolling that respects reduced motion
-- System font stack, no blocking web fonts
+- Orbitron web font for futuristic feel
+- 3D rotating cube on the hero section
 - Relative asset paths to work under `/REPO/` and custom domains
 - Robots + Sitemap, Open Graph + Twitter meta
 
