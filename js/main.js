@@ -36,9 +36,7 @@
 
   function setupAccordion(){
     document.querySelectorAll('.card .toggle').forEach(btn=>{
-      const panel = btn.nextElementSibling;
-      btn.setAttribute('aria-expanded','false');
-      panel.hidden = true;
+      const panel = document.getElementById(btn.getAttribute('aria-controls'));
       btn.addEventListener('click', ()=>{
         const expanded = btn.getAttribute('aria-expanded') === 'true';
         btn.setAttribute('aria-expanded', String(!expanded));

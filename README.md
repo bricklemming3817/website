@@ -5,7 +5,7 @@ Minimalist, mobile‑first static site ready for GitHub Pages. No frameworks, no
 ## Features
 - Semantic HTML with proper landmarks and heading order
 - Mobile‑first layout, responsive typography (`clamp()`), CSS Grid/Flex
-- Accessible menu toggle with ARIA and keyboard support
+- Accessible project accordion with ARIA and keyboard support
 - Sci-fi dark theme with neon accents
 - Smooth scrolling that respects reduced motion
 - Orbitron web font for futuristic feel
@@ -18,18 +18,20 @@ Minimalist, mobile‑first static site ready for GitHub Pages. No frameworks, no
 .
 ├── 404.html
 ├── README.md
+├── assets/
+│   ├── content.json
+│   ├── docs/
+│   └── …
+├── css/
+│   ├── main.css
+│   └── no-js.css
 ├── index.html
+├── js/
+│   └── main.js
+├── resume.html
 ├── robots.txt
-├── script.js
 ├── sitemap.xml
-├── site.webmanifest
-├── style.css
-└── assets/
-    ├── favicon.png
-    ├── favicon.svg
-    ├── icon-192.png
-    ├── icon-512.png
-    └── logo.svg
+└── site.webmanifest
 ```
 
 ## Local Preview
