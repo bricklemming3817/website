@@ -89,17 +89,9 @@ section { padding:64px 16px; max-width:var(--maxw); margin:0 auto; scroll-margin
 
 /* Lifecycle rail */
 #skills{
-  --bg:#fff;
-  --fg:#111;
-  --muted:#6b7280;
-  --accent:#1a73e8;
-  --border:#eaeaea;
-  --radius:12px;
   background:var(--bg);
   color:var(--fg);
-  font-family:system-ui,sans-serif;
 }
-#skills a{color:var(--accent);}
 #skills .rail{display:none;border-bottom:1px solid var(--border);margin-bottom:24px;}
 .js #skills .rail{display:flex;justify-content:space-between;}
 #skills .rail button{flex:1;background:none;border:none;padding:8px 0;font-size:clamp(14px,1.6vw,16px);cursor:pointer;color:inherit;}
