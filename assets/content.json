@@ -57,6 +57,55 @@
     "tools": ["JIRA","Confluence","Figma","Lucidchart","Visio","GitHub"],
     "methods": ["Agile/Scrum","KPI Design","Data Quality","Root-Cause Analysis"]
   },
+  "lifecycle": {
+    "steps": [
+      {
+        "id": "discover",
+        "title": "Discover",
+        "summary": "Understand the problem, users, and constraints.",
+        "skills": ["stakeholder interviews", "requirements elicitation", "data profiling", "KPI framing"],
+        "kpis": ["clear problem statement", "stakeholder alignment"],
+        "artifact": {"label": "discovery brief", "href": "/assets/docs/discovery-brief.pdf"},
+        "project_ref": "claims-redesign"
+      },
+      {
+        "id": "define",
+        "title": "Define",
+        "summary": "Specify what to build and how to measure success.",
+        "skills": ["BRD & user stories", "acceptance criteria", "process mapping (BPMN)"],
+        "kpis": ["zero-ambiguity handoffs", "traceability in change log"],
+        "artifact": {"label": "BRD sample", "href": "/assets/docs/brd-sample.pdf"},
+        "project_ref": "claims-redesign"
+      },
+      {
+        "id": "build",
+        "title": "Build",
+        "summary": "Prototype, model, and instrument for insight.",
+        "skills": ["SQL & pandas", "dashboarding (Tableau)", "rapid prototyping"],
+        "kpis": ["insight-to-action pipeline", "exec-ready visuals"],
+        "artifact": {"label": "dashboard snapshot", "href": "/assets/docs/dashboard.pdf"},
+        "project_ref": "telco-churn"
+      },
+      {
+        "id": "validate",
+        "title": "Validate",
+        "summary": "De-risk with tests and experiments.",
+        "skills": ["UAT & defect triage", "test cases", "A/B testing (power, t-tests)"],
+        "kpis": ["+5% engagement (p<0.001)", "12 defects blocked pre–go-live"],
+        "artifact": {"label": "A/B readout", "href": "/assets/docs/ab-readout.pdf"},
+        "project_ref": "fintech-ab-test"
+      },
+      {
+        "id": "deliver",
+        "title": "Deliver",
+        "summary": "Roll out with clarity and measurable outcomes.",
+        "skills": ["exec readouts", "change logs", "rollout playbook"],
+        "kpis": ["cycle-time target 30–40%↓", "errors <1%"],
+        "artifact": {"label": "exec deck", "href": "/assets/docs/exec-deck.pdf"},
+        "project_ref": "claims-redesign"
+      }
+    ]
+  },
   "resume": {
     "pdf": "/assets/kevin-varghese-resume.pdf",
     "last_updated": "2025-09-01"
