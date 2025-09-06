@@ -52,3 +52,36 @@ if (!reduceMotion) {
   });
 }
 
+// Number guessing mini game
+const guessInput = document.getElementById('guess-input');
+const guessBtn = document.getElementById('guess-button');
+const resetBtn = document.getElementById('reset-button');
+const gameMsg = document.getElementById('game-message');
+if (guessInput && guessBtn && resetBtn && gameMsg) {
+  let secret = Math.floor(Math.random() * 10) + 1;
+  const reset = () => {
+    secret = Math.floor(Math.random() * 10) + 1;
+    guessInput.value = '';
+    gameMsg.textContent = '';
+    guessBtn.disabled = false;
+    resetBtn.hidden = true;
+    guessInput.focus();
+  };
+  guessBtn.addEventListener('click', () => {
+    const guess = Number(guessInput.value);
+    if (!guess || guess < 1 || guess > 10) {
+      gameMsg.textContent = 'Enter a number from 1 to 10.';
+      return;
+    }
+    if (guess === secret) {
+      gameMsg.textContent = 'You got it!';
+      guessBtn.disabled = true;
+      resetBtn.hidden = false;
+      resetBtn.focus();
+    } else {
+      gameMsg.textContent = guess < secret ? 'Too low.' : 'Too high.';
+    }
+  });
+  resetBtn.addEventListener('click', reset);
+}
+
