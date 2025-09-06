@@ -78,39 +78,39 @@
 
     <section id="projects">
       <h2>Projects</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>A/B Testing — Onboarding <small>2024</small></h3>
-          <p>Stat-rigorous test improved first-week engagement.</p>
-          <div class="chips"><span class="chip">analytics</span><span class="chip">experiment</span><span class="chip">dashboard</span></div>
-          <button class="toggle" aria-expanded="true">Details</button>
-          <ul class="impact">
-            <li>~5% lift (p&lt;0.001)</li>
-            <li>dashboards</li>
-            <li>rollout playbook</li>
-          </ul>
+        <div class="cards">
+          <div class="card">
+            <h3>A/B Testing — Onboarding <small>2024</small></h3>
+            <p>Stat-rigorous test improved first-week engagement.</p>
+            <div class="chips"><span class="chip">analytics</span><span class="chip">experiment</span><span class="chip">dashboard</span></div>
+            <button class="toggle" aria-expanded="false" aria-controls="impact-onboarding">Details</button>
+            <ul id="impact-onboarding" class="impact" hidden>
+              <li>~5% lift (p&lt;0.001)</li>
+              <li>dashboards</li>
+              <li>rollout playbook</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Churn Prediction (SaaS) <small>2024</small></h3>
+            <p>Logistic model prioritised outreach.</p>
+            <div class="chips"><span class="chip">ml</span><span class="chip">eda</span><span class="chip">logistic-regression</span></div>
+            <button class="toggle" aria-expanded="false" aria-controls="impact-churn">Details</button>
+            <ul id="impact-churn" class="impact" hidden>
+              <li>ROC-AUC ~0.76</li>
+              <li>driver insights</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Claims System Redesign <small>2024</small></h3>
+            <p>As-Is/To-Be, validations, portal prototype.</p>
+            <div class="chips"><span class="chip">systems analysis</span><span class="chip">ux</span><span class="chip">process mapping</span></div>
+            <button class="toggle" aria-expanded="false" aria-controls="impact-claims">Details</button>
+            <ul id="impact-claims" class="impact" hidden>
+              <li>cycle-time target 30–40%↓</li>
+              <li>error-reduction goals</li>
+            </ul>
+          </div>
         </div>
-        <div class="card">
-          <h3>Churn Prediction (SaaS) <small>2024</small></h3>
-          <p>Logistic model prioritised outreach.</p>
-          <div class="chips"><span class="chip">ml</span><span class="chip">eda</span><span class="chip">logistic-regression</span></div>
-          <button class="toggle" aria-expanded="true">Details</button>
-          <ul class="impact">
-            <li>ROC-AUC ~0.76</li>
-            <li>driver insights</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Claims System Redesign <small>2024</small></h3>
-          <p>As-Is/To-Be, validations, portal prototype.</p>
-          <div class="chips"><span class="chip">systems analysis</span><span class="chip">ux</span><span class="chip">process mapping</span></div>
-          <button class="toggle" aria-expanded="true">Details</button>
-          <ul class="impact">
-            <li>cycle-time target 30–40%↓</li>
-            <li>error-reduction goals</li>
-          </ul>
-        </div>
-      </div>
     </section>
 
     <section id="skills" aria-labelledby="skills-h2">
