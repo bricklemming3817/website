@@ -113,48 +113,109 @@
       </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills">
-        <div class="card">
-          <h3>Core</h3>
-          <ul>
-            <li>BRD/Requirements</li>
-            <li>BPMN Process Maps</li>
-            <li>User Stories &amp; AC</li>
-            <li>UAT &amp; Defect Triage</li>
-            <li>Change Management</li>
-          </ul>
+    <section id="skills" aria-labelledby="skills-h2">
+      <div class="container">
+        <h2 id="skills-h2">How I Work</h2>
+
+        <div class="rail" role="tablist" aria-label="Lifecycle steps">
+          <button role="tab" id="tab-discover" aria-controls="panel-discover" aria-selected="true">Discover</button>
+          <button role="tab" id="tab-define" aria-controls="panel-define" aria-selected="false">Define</button>
+          <button role="tab" id="tab-build" aria-controls="panel-build" aria-selected="false">Build</button>
+          <button role="tab" id="tab-validate" aria-controls="panel-validate" aria-selected="false">Validate</button>
+          <button role="tab" id="tab-deliver" aria-controls="panel-deliver" aria-selected="false">Deliver</button>
         </div>
-        <div class="card">
-          <h3>Data</h3>
-          <ul>
-            <li>SQL</li>
-            <li>Python (pandas)</li>
-            <li>Excel/Power Query</li>
-            <li>Tableau</li>
-            <li>Experimentation</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Tools</h3>
-          <ul>
-            <li>JIRA</li>
-            <li>Confluence</li>
-            <li>Figma</li>
-            <li>Lucidchart</li>
-            <li>Visio</li>
-            <li>GitHub</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Methods</h3>
-          <ul>
-            <li>Agile/Scrum</li>
-            <li>KPI Design</li>
-            <li>Data Quality</li>
-            <li>Root-Cause Analysis</li>
-          </ul>
+
+        <div class="rail-panels">
+          <section id="panel-discover" role="tabpanel" aria-labelledby="tab-discover">
+            <h3>Discover</h3>
+            <p class="summary">Understand the problem, users, and constraints.</p>
+            <ul class="chips skills">
+              <li>stakeholder interviews</li>
+              <li>requirements elicitation</li>
+              <li>data profiling</li>
+              <li>KPI framing</li>
+            </ul>
+            <ul class="chips kpis">
+              <li>clear problem statement</li>
+              <li>stakeholder alignment</li>
+            </ul>
+            <p class="artifact">
+              <a href="/assets/docs/discovery-brief.pdf">discovery brief (PDF)</a>
+              <a href="#projects" data-project="claims-redesign" class="chip-link">related project</a>
+            </p>
+          </section>
+
+          <section id="panel-define" role="tabpanel" aria-labelledby="tab-define">
+            <h3>Define</h3>
+            <p class="summary">Specify what to build and how to measure success.</p>
+            <ul class="chips skills">
+              <li>BRD &amp; user stories</li>
+              <li>acceptance criteria</li>
+              <li>process mapping (BPMN)</li>
+            </ul>
+            <ul class="chips kpis">
+              <li>zero-ambiguity handoffs</li>
+              <li>traceability in change log</li>
+            </ul>
+            <p class="artifact">
+              <a href="/assets/docs/brd-sample.pdf">BRD sample (PDF)</a>
+              <a href="#projects" data-project="claims-redesign" class="chip-link">related project</a>
+            </p>
+          </section>
+
+          <section id="panel-build" role="tabpanel" aria-labelledby="tab-build">
+            <h3>Build</h3>
+            <p class="summary">Prototype, model, and instrument for insight.</p>
+            <ul class="chips skills">
+              <li>SQL &amp; pandas</li>
+              <li>dashboarding (Tableau)</li>
+              <li>rapid prototyping</li>
+            </ul>
+            <ul class="chips kpis">
+              <li>insight-to-action pipeline</li>
+              <li>exec-ready visuals</li>
+            </ul>
+            <p class="artifact">
+              <a href="/assets/docs/dashboard.pdf">dashboard snapshot (PDF)</a>
+              <a href="#projects" data-project="telco-churn" class="chip-link">related project</a>
+            </p>
+          </section>
+
+          <section id="panel-validate" role="tabpanel" aria-labelledby="tab-validate">
+            <h3>Validate</h3>
+            <p class="summary">De-risk with tests and experiments.</p>
+            <ul class="chips skills">
+              <li>UAT &amp; defect triage</li>
+              <li>test cases</li>
+              <li>A/B testing (power, t-tests)</li>
+            </ul>
+            <ul class="chips kpis">
+              <li>+5% engagement (p&lt;0.001)</li>
+              <li>12 defects blocked pre–go-live</li>
+            </ul>
+            <p class="artifact">
+              <a href="/assets/docs/ab-readout.pdf">A/B readout (PDF)</a>
+              <a href="#projects" data-project="fintech-ab-test" class="chip-link">related project</a>
+            </p>
+          </section>
+
+          <section id="panel-deliver" role="tabpanel" aria-labelledby="tab-deliver">
+            <h3>Deliver</h3>
+            <p class="summary">Roll out with clarity and measurable outcomes.</p>
+            <ul class="chips skills">
+              <li>exec readouts</li>
+              <li>change logs</li>
+              <li>rollout playbook</li>
+            </ul>
+            <ul class="chips kpis">
+              <li>cycle-time target 30–40%↓</li>
+              <li>errors &lt;1%</li>
+            </ul>
+            <p class="artifact">
+              <a href="/assets/docs/exec-deck.pdf">exec deck (PDF)</a>
+              <a href="#projects" data-project="claims-redesign" class="chip-link">related project</a>
+            </p>
+          </section>
         </div>
       </div>
     </section>
