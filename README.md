@@ -6,7 +6,7 @@ Minimalist, mobile‑first static site ready for GitHub Pages. No frameworks, no
 - Semantic HTML with proper landmarks and heading order
 - Mobile‑first layout, responsive typography (`clamp()`), CSS Grid/Flex
 - Accessible menu toggle with ARIA and keyboard support
-- Dark mode via `prefers-color-scheme`
+- Light theme only
 - Smooth scrolling that respects reduced motion
 - System font stack, no blocking web fonts
 - Relative asset paths to work under `/REPO/` and custom domains
