@@ -2,6 +2,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     setupScroll();
     setupObserver();
+    setupAccordion();
   });
 
   function setupScroll(){
@@ -29,6 +30,19 @@
       });
     }, {rootMargin:'-50% 0px -50% 0px'});
     sections.forEach(s=>obs.observe(s));
+  }
+
+  function setupAccordion(){
+    document.querySelectorAll('.card .toggle').forEach(btn=>{
+      const panel = btn.nextElementSibling;
+      btn.setAttribute('aria-expanded','false');
+      panel.hidden = true;
+      btn.addEventListener('click', ()=>{
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        panel.hidden = expanded;
+      });
+    });
   }
 })();
 

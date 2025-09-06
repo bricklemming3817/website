@@ -45,6 +45,7 @@
 </head>
 <body>
   <a class="skip" href="#home">Skip to content</a>
+  <noscript><p class="noscript-msg">JavaScript is disabled; interactive enhancements are unavailable.</p></noscript>
   <header id="top">
     <nav>
       <ul class="nav">
@@ -61,55 +62,46 @@
       <h1>Kevin Varghese</h1>
       <h2>Business / Data / Systems Analyst — Toronto</h2>
       <p>I turn messy processes into measurable outcomes.</p>
-      <div class="chips">
-        <span class="chip">ECBA-certified</span>
-        <span class="chip">Agile SDLC &amp; UAT</span>
-        <span class="chip">SQL/Python/Tableau</span>
-      </div>
       <p class="cta">
         <a class="btn" href="#projects">View Projects</a>
         <a class="btn" href="assets/kevin-varghese-resume.pdf">Download Resume</a>
       </p>
-      <noscript>JavaScript is disabled; interactive enhancements are unavailable.</noscript>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
       <div class="cards">
-        <details class="card">
-          <summary>
-            <h3>A/B Testing — Onboarding <small>2024</small></h3>
-            <p>Stat-rigorous test improved first-week engagement.</p>
-            <div class="chips"><span class="chip">Analytics</span><span class="chip">Experiment</span><span class="chip">Dashboard</span></div>
-          </summary>
-          <ul>
-            <li>~5% lift (p &lt; 0.001)</li>
-            <li>Dashboard readouts</li>
-            <li>Rollout playbook</li>
+        <div class="card">
+          <h3>A/B Testing — Onboarding <small>2024</small></h3>
+          <p>Stat-rigorous test improved first-week engagement.</p>
+          <div class="chips"><span class="chip">analytics</span><span class="chip">experiment</span><span class="chip">dashboard</span></div>
+          <button class="toggle" aria-expanded="true">Details</button>
+          <ul class="impact">
+            <li>~5% lift (p&lt;0.001)</li>
+            <li>dashboards</li>
+            <li>rollout playbook</li>
           </ul>
-        </details>
-        <details class="card">
-          <summary>
-            <h3>Churn Prediction (SaaS) <small>2024</small></h3>
-            <p>Logistic model to target retention outreach.</p>
-            <div class="chips"><span class="chip">ML</span><span class="chip">EDA</span><span class="chip">Logistic Regression</span></div>
-          </summary>
-          <ul>
+        </div>
+        <div class="card">
+          <h3>Churn Prediction (SaaS) <small>2024</small></h3>
+          <p>Logistic model prioritised outreach.</p>
+          <div class="chips"><span class="chip">ml</span><span class="chip">eda</span><span class="chip">logistic-regression</span></div>
+          <button class="toggle" aria-expanded="true">Details</button>
+          <ul class="impact">
             <li>ROC-AUC ~0.76</li>
-            <li>Driver insights</li>
+            <li>driver insights</li>
           </ul>
-        </details>
-        <details class="card">
-          <summary>
-            <h3>Claims System Redesign <small>2024</small></h3>
-            <p>As-Is/To-Be, validations, and portal prototype.</p>
-            <div class="chips"><span class="chip">Systems Analysis</span><span class="chip">UX</span><span class="chip">Process Mapping</span></div>
-          </summary>
-          <ul>
-            <li>Cycle-time target 30–40%↓</li>
-            <li>Error reduction goals</li>
+        </div>
+        <div class="card">
+          <h3>Claims System Redesign <small>2024</small></h3>
+          <p>As-Is/To-Be, validations, portal prototype.</p>
+          <div class="chips"><span class="chip">systems analysis</span><span class="chip">ux</span><span class="chip">process mapping</span></div>
+          <button class="toggle" aria-expanded="true">Details</button>
+          <ul class="impact">
+            <li>cycle-time target 30–40%↓</li>
+            <li>error-reduction goals</li>
           </ul>
-        </details>
+        </div>
       </div>
     </section>
 
@@ -170,7 +162,7 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p><a class="btn" href="mailto:kevin@example.com?subject=Hello%20Kevin&amp;body=Hi%20Kevin,">Email</a> <a class="btn" href="https://www.linkedin.com/in/...">LinkedIn</a></p>
+      <p><a href="mailto:kevin@example.com">kevin@example.com</a> <a class="btn" href="https://www.linkedin.com/in/...">LinkedIn</a></p>
     </section>
   </main>
 
