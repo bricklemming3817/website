@@ -7,6 +7,41 @@
   <meta name="description" content="Portfolio of Kevin Varghese, Business/Data/Systems Analyst in Toronto, Canada." />
   <link rel="stylesheet" href="./css/main.css" />
   <script defer src="./js/main.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kevin Varghese",
+    "jobTitle": "Business / Data / Systems Analyst",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Toronto",
+      "addressCountry": "Canada"
+    },
+    "email": "mailto:kevin@example.com",
+    "url": "https://example.com",
+    "hasPart": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "CreativeWork",
+          "name": "A/B Testing — Onboarding",
+          "datePublished": "2024"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Churn Prediction (SaaS)",
+          "datePublished": "2024"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Claims System Redesign",
+          "datePublished": "2024"
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
   <a class="skip" href="#home">Skip to content</a>
@@ -18,51 +53,132 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><button id="theme-toggle" aria-label="Toggle theme">🌓</button></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section id="home">
+    <section id="home" class="hero">
       <h1>Kevin Varghese</h1>
-      <p>Business / Data / Systems Analyst</p>
-      <p class="no-js">Enable JavaScript to load full content.</p>
+      <h2>Business / Data / Systems Analyst — Toronto</h2>
+      <p>I turn messy processes into measurable outcomes.</p>
+      <div class="chips">
+        <span class="chip">ECBA-certified</span>
+        <span class="chip">Agile SDLC &amp; UAT</span>
+        <span class="chip">SQL/Python/Tableau</span>
+      </div>
+      <p class="cta">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn" href="assets/kevin-varghese-resume.pdf">Download Resume</a>
+      </p>
+      <noscript>JavaScript is disabled; interactive enhancements are unavailable.</noscript>
     </section>
+
     <section id="projects">
       <h2>Projects</h2>
-      <div id="project-filters" class="chips"></div>
-      <div id="project-list" class="cards"></div>
+      <div class="cards">
+        <details class="card">
+          <summary>
+            <h3>A/B Testing — Onboarding <small>2024</small></h3>
+            <p>Stat-rigorous test improved first-week engagement.</p>
+            <div class="chips"><span class="chip">Analytics</span><span class="chip">Experiment</span><span class="chip">Dashboard</span></div>
+          </summary>
+          <ul>
+            <li>~5% lift (p &lt; 0.001)</li>
+            <li>Dashboard readouts</li>
+            <li>Rollout playbook</li>
+          </ul>
+        </details>
+        <details class="card">
+          <summary>
+            <h3>Churn Prediction (SaaS) <small>2024</small></h3>
+            <p>Logistic model to target retention outreach.</p>
+            <div class="chips"><span class="chip">ML</span><span class="chip">EDA</span><span class="chip">Logistic Regression</span></div>
+          </summary>
+          <ul>
+            <li>ROC-AUC ~0.76</li>
+            <li>Driver insights</li>
+          </ul>
+        </details>
+        <details class="card">
+          <summary>
+            <h3>Claims System Redesign <small>2024</small></h3>
+            <p>As-Is/To-Be, validations, and portal prototype.</p>
+            <div class="chips"><span class="chip">Systems Analysis</span><span class="chip">UX</span><span class="chip">Process Mapping</span></div>
+          </summary>
+          <ul>
+            <li>Cycle-time target 30–40%↓</li>
+            <li>Error reduction goals</li>
+          </ul>
+        </details>
+      </div>
     </section>
+
     <section id="skills">
       <h2>Skills</h2>
-      <div id="skills-columns" class="skills"></div>
+      <div class="skills">
+        <div class="card">
+          <h3>Core</h3>
+          <ul>
+            <li>BRD/Requirements</li>
+            <li>BPMN Process Maps</li>
+            <li>User Stories &amp; AC</li>
+            <li>UAT &amp; Defect Triage</li>
+            <li>Change Management</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Data</h3>
+          <ul>
+            <li>SQL</li>
+            <li>Python (pandas)</li>
+            <li>Excel/Power Query</li>
+            <li>Tableau</li>
+            <li>Experimentation</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Tools</h3>
+          <ul>
+            <li>JIRA</li>
+            <li>Confluence</li>
+            <li>Figma</li>
+            <li>Lucidchart</li>
+            <li>Visio</li>
+            <li>GitHub</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Methods</h3>
+          <ul>
+            <li>Agile/Scrum</li>
+            <li>KPI Design</li>
+            <li>Data Quality</li>
+            <li>Root-Cause Analysis</li>
+          </ul>
+        </div>
+      </div>
     </section>
+
     <section id="resume">
       <h2>Resume</h2>
-      <p id="resume-summary">Latest resume.</p>
+      <p>Last updated: 2025-09-01</p>
       <div class="resume-actions">
-        <a id="resume-html" href="#" class="btn">View HTML Resume</a>
-        <a id="resume-pdf" href="#" class="btn">Download PDF</a>
+        <a href="resume.html" class="btn">View HTML Resume</a>
+        <a href="assets/kevin-varghese-resume.pdf" class="btn">Download PDF</a>
       </div>
-      <div id="resume-print" class="print-area" hidden></div>
     </section>
+
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a id="contact-email" href="mailto:kevin@example.com">kevin@example.com</a></p>
-      <div class="contact-links" id="contact-links"></div>
-      <form id="contact-form" action="mailto:kevin@example.com" method="post" enctype="text/plain">
-        <label>Name <input type="text" name="name" required /></label>
-        <label>Email <input type="email" name="email" required /></label>
-        <label>Message <textarea name="message" maxlength="1000" required></textarea></label>
-        <button type="submit">Send</button>
-      </form>
-      <p id="contact-location"></p>
+      <p><a class="btn" href="mailto:kevin@example.com?subject=Hello%20Kevin&amp;body=Hi%20Kevin,">Email</a> <a class="btn" href="https://www.linkedin.com/in/...">LinkedIn</a></p>
     </section>
   </main>
+
   <footer id="footer">
-    <p>© <span id="year"></span> Kevin Varghese. Built for speed and accessibility.</p>
-    <ul id="footer-links" class="footer-links"></ul>
+    <p>© 2025 Kevin Varghese. Built for speed and accessibility.</p>
   </footer>
+
   <noscript><link rel="stylesheet" href="./css/no-js.css" /></noscript>
 </body>
 </html>
+
