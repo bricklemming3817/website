@@ -1,7 +1,7 @@
 /*
   Minimal reset and variables
   - System fonts
-  - Light/dark themes
+  - Light theme
   - Mobile-first, responsive container
 */
 
@@ -26,20 +26,8 @@ input, button, textarea, select { font: inherit; }
   --shadow: 0 1px 2px rgba(0,0,0,.06), 0 1px 3px rgba(0,0,0,.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0b0e12;
-    --fg: #e5e7eb;
-    --muted: #a1a1aa;
-    --accent: #f472b6;
-    --accent-contrast: #0b0e12;
-    --surface: #12161c;
-    --ring: #f9a8d4;
-  }
-}
-
 /* Base */
-html { color-scheme: light dark; }
+html { color-scheme: light; }
 body {
   background: var(--bg);
   color: var(--fg);
