@@ -3,241 +3,54 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kevin Varghese — Business / Data / Systems Analyst</title>
-  <meta name="description" content="Portfolio of Kevin Varghese, Business/Data/Systems Analyst in Toronto, Canada." />
+  <title>Acme Bank</title>
+  <meta name="description" content="Acme Bank provides secure banking services including checking, savings, and loans." />
   <link rel="stylesheet" href="./css/main.css" />
-  <script defer src="./js/main.js"></script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Kevin Varghese",
-    "jobTitle": "Business / Data / Systems Analyst",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Toronto",
-      "addressCountry": "Canada"
-    },
-    "email": "mailto:kevin@example.com",
-    "url": "https://example.com",
-    "hasPart": {
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "CreativeWork",
-          "name": "A/B Testing — Onboarding",
-          "datePublished": "2024"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Churn Prediction (SaaS)",
-          "datePublished": "2024"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Claims System Redesign",
-          "datePublished": "2024"
-        }
-      ]
-    }
-  }
-  </script>
 </head>
 <body>
-  <a class="skip" href="#home">Skip to content</a>
-  <noscript><p class="noscript-msg">JavaScript is disabled; interactive enhancements are unavailable.</p></noscript>
-  <header id="top">
+  <header>
     <nav>
       <ul class="nav">
         <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#how-i-work">How I Work</a></li>
-        <li><a href="#resume">Resume</a></li>
+        <li><a href="#accounts">Accounts</a></li>
+        <li><a href="#loans">Loans</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <section id="home" class="hero">
-      <h1>Kevin Varghese</h1>
-      <h2>Business / Data / Systems Analyst — Toronto</h2>
-      <p>I turn messy processes into measurable outcomes.</p>
+      <h1>Acme Bank</h1>
+      <h2>Secure banking for your future</h2>
       <p class="cta">
-        <a class="btn" href="#projects">View Projects</a>
-        <a class="btn" href="./assets/kevin-varghese-resume.pdf">Download Resume</a>
+        <a class="btn" href="#accounts">Open an Account</a>
+        <a class="btn" href="#contact">Contact Us</a>
       </p>
-      <div class="cube" aria-hidden="true">
-        <div class="face front"></div>
-        <div class="face back"></div>
-        <div class="face right"></div>
-        <div class="face left"></div>
-        <div class="face top"></div>
-        <div class="face bottom"></div>
-      </div>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>A/B Testing — Onboarding <small>2024</small></h3>
-            <p>Stat-rigorous test improved first-week engagement.</p>
-            <div class="chips"><span class="chip">analytics</span><span class="chip">experiment</span><span class="chip">dashboard</span></div>
-            <button class="toggle" aria-expanded="false" aria-controls="impact-onboarding">Details</button>
-            <ul id="impact-onboarding" class="impact" hidden>
-              <li>~5% lift (p&lt;0.001)</li>
-              <li>dashboards</li>
-              <li>rollout playbook</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Churn Prediction (SaaS) <small>2024</small></h3>
-            <p>Logistic model prioritised outreach.</p>
-            <div class="chips"><span class="chip">ml</span><span class="chip">eda</span><span class="chip">logistic-regression</span></div>
-            <button class="toggle" aria-expanded="false" aria-controls="impact-churn">Details</button>
-            <ul id="impact-churn" class="impact" hidden>
-              <li>ROC-AUC ~0.76</li>
-              <li>driver insights</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Claims System Redesign <small>2024</small></h3>
-            <p>As-Is/To-Be, validations, portal prototype.</p>
-            <div class="chips"><span class="chip">systems analysis</span><span class="chip">ux</span><span class="chip">process mapping</span></div>
-            <button class="toggle" aria-expanded="false" aria-controls="impact-claims">Details</button>
-            <ul id="impact-claims" class="impact" hidden>
-              <li>cycle-time target 30–40%↓</li>
-              <li>error-reduction goals</li>
-            </ul>
-          </div>
-        </div>
+    <section id="accounts">
+      <h2>Accounts</h2>
+      <p>Checking and savings accounts with no hidden fees.</p>
     </section>
 
-    <section id="how-i-work" aria-labelledby="how-i-work-h2">
-      <h2 id="how-i-work-h2">How I Work</h2>
-
-      <div class="rail" role="tablist" aria-label="Lifecycle steps">
-          <button role="tab" id="tab-discover" aria-controls="panel-discover" aria-selected="false">Discover</button>
-          <button role="tab" id="tab-define" aria-controls="panel-define" aria-selected="false">Define</button>
-          <button role="tab" id="tab-build" aria-controls="panel-build" aria-selected="false">Build</button>
-          <button role="tab" id="tab-validate" aria-controls="panel-validate" aria-selected="false">Validate</button>
-          <button role="tab" id="tab-deliver" aria-controls="panel-deliver" aria-selected="false">Deliver</button>
-        </div>
-
-      <div class="rail-panels">
-          <section id="panel-discover" role="tabpanel" aria-labelledby="tab-discover">
-            <h3>Discover</h3>
-            <p class="summary">Understand the problem, users, and constraints.</p>
-            <ul class="chips skills">
-              <li>stakeholder interviews</li>
-              <li>requirements elicitation</li>
-              <li>data profiling</li>
-              <li>KPI framing</li>
-            </ul>
-            <ul class="chips kpis">
-              <li>clear problem statement</li>
-              <li>stakeholder alignment</li>
-            </ul>
-            <p class="artifact">
-              <a href="./assets/docs/discovery-brief.pdf">discovery brief (PDF)</a>
-              <a href="#projects" data-project="claims-redesign" class="chip-link">related project</a>
-            </p>
-          </section>
-
-          <section id="panel-define" role="tabpanel" aria-labelledby="tab-define">
-            <h3>Define</h3>
-            <p class="summary">Specify what to build and how to measure success.</p>
-            <ul class="chips skills">
-              <li>BRD &amp; user stories</li>
-              <li>acceptance criteria</li>
-              <li>process mapping (BPMN)</li>
-            </ul>
-            <ul class="chips kpis">
-              <li>zero-ambiguity handoffs</li>
-              <li>traceability in change log</li>
-            </ul>
-            <p class="artifact">
-              <a href="./assets/docs/brd-sample.pdf">BRD sample (PDF)</a>
-              <a href="#projects" data-project="claims-redesign" class="chip-link">related project</a>
-            </p>
-          </section>
-
-          <section id="panel-build" role="tabpanel" aria-labelledby="tab-build">
-            <h3>Build</h3>
-            <p class="summary">Prototype, model, and instrument for insight.</p>
-            <ul class="chips skills">
-              <li>SQL &amp; pandas</li>
-              <li>dashboarding (Tableau)</li>
-              <li>rapid prototyping</li>
-            </ul>
-            <ul class="chips kpis">
-              <li>insight-to-action pipeline</li>
-              <li>exec-ready visuals</li>
-            </ul>
-            <p class="artifact">
-              <a href="./assets/docs/dashboard.pdf">dashboard snapshot (PDF)</a>
-              <a href="#projects" data-project="telco-churn" class="chip-link">related project</a>
-            </p>
-          </section>
-
-          <section id="panel-validate" role="tabpanel" aria-labelledby="tab-validate">
-            <h3>Validate</h3>
-            <p class="summary">De-risk with tests and experiments.</p>
-            <ul class="chips skills">
-              <li>UAT &amp; defect triage</li>
-              <li>test cases</li>
-              <li>A/B testing (power, t-tests)</li>
-            </ul>
-            <ul class="chips kpis">
-              <li>+5% engagement (p&lt;0.001)</li>
-              <li>12 defects blocked pre–go-live</li>
-            </ul>
-            <p class="artifact">
-              <a href="./assets/docs/ab-readout.pdf">A/B readout (PDF)</a>
-              <a href="#projects" data-project="fintech-ab-test" class="chip-link">related project</a>
-            </p>
-          </section>
-
-          <section id="panel-deliver" role="tabpanel" aria-labelledby="tab-deliver">
-            <h3>Deliver</h3>
-            <p class="summary">Roll out with clarity and measurable outcomes.</p>
-            <ul class="chips skills">
-              <li>exec readouts</li>
-              <li>change logs</li>
-              <li>rollout playbook</li>
-            </ul>
-            <ul class="chips kpis">
-              <li>cycle-time target 30–40%↓</li>
-              <li>errors &lt;1%</li>
-            </ul>
-            <p class="artifact">
-              <a href="./assets/docs/exec-deck.pdf">exec deck (PDF)</a>
-              <a href="#projects" data-project="claims-redesign" class="chip-link">related project</a>
-            </p>
-          </section>
-      </div>
+    <section id="loans">
+      <h2>Loans</h2>
+      <p>Flexible personal and home loan options at competitive rates.</p>
     </section>
 
-    <section id="resume">
-      <h2>Resume</h2>
-      <p>Last updated: 2025-09-01</p>
-      <div class="resume-actions">
-        <a href="./resume.html" class="btn">View HTML Resume</a>
-        <a href="./assets/kevin-varghese-resume.pdf" class="btn">Download PDF</a>
-      </div>
+    <section id="about">
+      <h2>About</h2>
+      <p>Acme Bank has served communities since 1971. We put customers first.</p>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p><a href="mailto:kevin@example.com?subject=Portfolio%20Inquiry%20%E2%80%94%20Kevin%20Varghese">Email</a> <a class="btn" href="https://www.linkedin.com/in/kevin-varghese/">LinkedIn</a></p>
+      <p><a href="mailto:info@acmebank.test">Email us</a> or call 1-800-000-0000.</p>
     </section>
   </main>
-
   <footer id="footer">
-    <p>© 2025 Kevin Varghese. Built for speed and accessibility.</p>
+    <p>© 2025 Acme Bank. All rights reserved.</p>
   </footer>
-
-  <noscript><link rel="stylesheet" href="./css/no-js.css" /></noscript>
 </body>
 </html>
-
