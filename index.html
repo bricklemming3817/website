@@ -1,10 +1,320 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>will be back soon</title>
-</head>
-<body>
-  will be back soon
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>TBR — Meaningful Software</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        --accent: #0055ff;
+        --background: #fff;
+        --foreground: #000;
+        --border: #ddd;
+      }
+      .dark {
+        --background: #000;
+        --foreground: #fff;
+        --border: #333;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: var(--background);
+        color: var(--foreground);
+        line-height: 1.5;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: var(--background);
+        border-bottom: 1px solid var(--border);
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      header nav {
+        display: flex;
+        gap: 1rem;
+      }
+      header a {
+        text-decoration: none;
+        color: inherit;
+        padding: 0.25rem 0.5rem;
+      }
+      header a:hover,
+      header a:focus {
+        color: var(--accent);
+      }
+      .theme-toggle {
+        position: absolute;
+        left: 1rem;
+        background: none;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 0.25rem 0.5rem;
+        cursor: pointer;
+        color: inherit;
+      }
+      section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 1rem;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin-top: 0;
+      }
+      .buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .button {
+        border: 1px solid var(--border);
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        text-decoration: none;
+        color: inherit;
+      }
+      .button:hover,
+      .button:focus {
+        border-color: var(--accent);
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+      .chip {
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 0.25rem 0.75rem;
+        font-size: 0.875rem;
+      }
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .project-card {
+        border: 1px solid var(--border);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .project-card h3 {
+        margin: 0;
+      }
+      .project-card img {
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--border);
+      }
+      .project-card details {
+        margin-top: 0.5rem;
+      }
+      .project-card details summary {
+        color: var(--accent);
+        cursor: pointer;
+        list-style: none;
+      }
+      .project-card details summary::-webkit-details-marker {
+        display: none;
+      }
+      .project-card details[open] summary {
+        margin-bottom: 0.5rem;
+      }
+      .project-card details div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .philosophy-list,
+      .now-list,
+      .next-list,
+      .changelog {
+        list-style: none;
+        padding-left: 0;
+      }
+      .now-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+      footer {
+        padding: 4rem 1rem;
+        text-align: center;
+        border-top: 1px solid var(--border);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button id="theme-toggle" class="theme-toggle">Theme</button>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#now">Now</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <h1>I write software with meaning.</h1>
+        <p>Meaning is clarity, usefulness, and care.</p>
+        <div class="buttons">
+          <a class="button" href="#projects">Explore Projects</a>
+          <a class="button" href="#philosophy">Read Philosophy</a>
+        </div>
+        <div class="chips">
+          <span class="chip">clarity</span>
+          <span class="chip">utility</span>
+          <span class="chip">calm</span>
+          <span class="chip">craft</span>
+          <span class="chip">openness</span>
+        </div>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <img
+              src="https://via.placeholder.com/300x160?text=Note+Widget"
+              alt="Note Widget screenshot"
+            />
+            <h3>Note Widget</h3>
+            <p>One note, always visible on the home screen.</p>
+            <div class="chips">
+              <span class="chip">clarity</span>
+              <span class="chip">calm</span>
+            </div>
+            <details>
+              <summary>See the why</summary>
+              <div>
+                <p>
+                  <strong>Purpose:</strong> Keep a single thought present
+                  without noise.
+                </p>
+                <p>
+                  <strong>Why:</strong> Attention is scarce; fewer choices help
+                  focus.
+                </p>
+                <p>
+                  <strong>Approach:</strong> SwiftUI widget, simple state, no
+                  sync by default.
+                </p>
+                <p>
+                  <strong>Outcome:</strong> Launch-to-note under one second;
+                  zero setup.
+                </p>
+                <p>
+                  <strong>Reflection:</strong> Constraint (one note) increased
+                  daily use.
+                </p>
+              </div>
+            </details>
+          </article>
+          <article class="project-card">
+            <img
+              src="https://via.placeholder.com/300x160?text=Resume+Generator"
+              alt="Résumé Generator screenshot"
+            />
+            <h3>Résumé Generator</h3>
+            <p>Opinionated generator for clear, useful résumés.</p>
+            <div class="chips">
+              <span class="chip">clarity</span>
+              <span class="chip">utility</span>
+            </div>
+            <details>
+              <summary>See the why</summary>
+              <div>
+                <p>
+                  <strong>Purpose:</strong> Reduce editing time and remove
+                  fluff.
+                </p>
+                <p>
+                  <strong>Why:</strong> Clarity is kind; readers have limited
+                  time.
+                </p>
+                <p>
+                  <strong>Approach:</strong> Schema-first content, tight
+                  templates, lint rules.
+                </p>
+                <p>
+                  <strong>Outcome:</strong> Edit time cut ~60%; ATS-safe output.
+                </p>
+                <p>
+                  <strong>Reflection:</strong> Good constraints produce better
+                  writing.
+                </p>
+              </div>
+            </details>
+          </article>
+        </div>
+      </section>
+      <section id="philosophy">
+        <h2>Philosophy</h2>
+        <ul class="philosophy-list">
+          <li>Build for clarity → schema-first content and tight copy.</li>
+          <li>Reduce surface area → fewer settings, fewer errors.</li>
+          <li>Ship small, iterate → reality beats speculation.</li>
+          <li>Make time costs visible → fewer clicks, faster feedback.</li>
+          <li>Leave it better → clean diffs, clear docs, simple exits.</li>
+        </ul>
+      </section>
+      <section id="now">
+        <h2>Now</h2>
+        <div class="now-wrapper">
+          <div>
+            <h3>Exploring</h3>
+            <ul class="now-list">
+              <li>Keyboard-driven interfaces</li>
+              <li>Small web tools</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Next</h3>
+            <ul class="next-list">
+              <li>Shared digital garden</li>
+              <li>Lightweight sync experiments</li>
+            </ul>
+          </div>
+        </div>
+        <h3>Changelog</h3>
+        <ul class="changelog">
+          <li>2024-06-01 — Added Résumé Generator project.</li>
+          <li>2024-05-20 — Launched Note Widget.</li>
+          <li>2024-05-01 — Site launched.</li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>If this resonates, say hi.</p>
+        <p>
+          <a href="mailto:hello@example.com">Email</a> ·
+          <a href="https://github.com/example">GitHub</a> ·
+          <a href="https://x.com/example">X</a>
+        </p>
+      </section>
+    </main>
+    <footer>
+      <small>The site is a living shelf of work in progress.</small>
+    </footer>
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+      toggle.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+      });
+    </script>
+  </body>
 </html>
