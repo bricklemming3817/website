@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>kevin — Projects</title>
+  <title>kevin — my explorations</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,26 +11,73 @@
     <h1>kevin</h1>
     <p class="bio">i write software with purpose. for me, building is about shaping ideas into tools that make life simpler and more meaningful. each project is a reflection of curiosity, imagination, and the pursuit of happiness. this space is where i share what i create — ongoing explorations of how technology can align with thought, design, and intent.</p>
     <nav class="contacts">
-      <a href="mailto:hello@example.com">Email</a>
-      <a href="https://github.com/your-github-username">GitHub</a>
-      <a href="https://x.com/your-x-handle">X</a>
+      <a id="copy-email" href="#" data-email="7f9x2b1qg5l8m4h3z0kwdyrc.tulip471@slmails.com" aria-label="copy email to clipboard" title="click to copy email">email</a>
+      <a href="https://github.com/bricklemming3817">github</a>
+      <a href="https://x.com/deepdebugger">𝕏</a>
     </nav>
   </header>
   <main class="projects">
-    <h2>Projects</h2>
+    <h2>my explorations</h2>
     <ul>
       <li>
         <a href="projects/note-widget.html">Note Widget</a>
         <p>One note, always visible on the home screen.</p>
       </li>
-      <li>
-        <a href="projects/resume-generator.html">Résumé Generator</a>
-        <p>Opinionated generator for clear, useful résumés.</p>
+      <li class="placeholder" aria-label="new project under construction">
+        <div aria-hidden="true">new project under construction</div>
       </li>
     </ul>
   </main>
   <footer>
-    <small>© kevin</small>
+    <small>this shelf is always a work in progress</small>
   </footer>
+  <script src="script.js" defer></script>
+  <span id="copy-status" class="visually-hidden" aria-live="polite"></span>
+  <script>
+    (function () {
+      const link = document.getElementById('copy-email');
+      if (!link) return;
+      const email = link.getAttribute('data-email');
+      const status = document.getElementById('copy-status');
+
+      async function copy(text) {
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+            return true;
+          }
+        } catch (e) { /* fall through to legacy path */ }
+        try {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.top = '-9999px';
+          document.body.appendChild(ta);
+          ta.focus();
+          ta.select();
+          const ok = document.execCommand('copy');
+          document.body.removeChild(ta);
+          return ok;
+        } catch (e) { return false; }
+      }
+
+      link.addEventListener('click', async (e) => {
+        if (document.body.isContentEditable || document.body.getAttribute('data-edit-mode') === 'on') {
+          e.preventDefault();
+          return;
+        }
+        e.preventDefault();
+        const ok = await copy(email);
+        const original = link.textContent;
+        link.textContent = ok ? 'Copied!' : 'Copy failed';
+        if (status) status.textContent = ok ? 'Email copied to clipboard' : 'Failed to copy email';
+        setTimeout(() => {
+          link.textContent = original;
+          if (status) status.textContent = '';
+        }, 1200);
+      });
+    })();
+  </script>
 </body>
 </html>
