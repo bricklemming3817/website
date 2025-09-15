@@ -1,0 +1,39 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0 1rem;
+  line-height: 1.5;
+}
+header {
+  margin-top: 2rem;
+  text-align: center;
+}
+.bio {
+  color: #555;
+  max-width: 600px;
+  margin: 0.5rem auto;
+}
+.contacts a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+.projects {
+  max-width: 800px;
+  margin: 3rem auto;
+}
+.projects ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+.projects li {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 4px;
+}
+footer {
+  margin: 3rem 0;
+  text-align: center;
+  color: #555;
+}

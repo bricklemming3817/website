@@ -1,86 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="{{ site.description }}" />
-    <title>{{ site.author_name }} — Projects</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
-    <style>
-      :root { --accent:#0055ff; --background:#fff; --foreground:#000; --border:#ddd; }
-      .dark { --background:#000; --foreground:#fff; --border:#333; }
-      html { scroll-behavior:smooth; }
-      body { margin:0; font-family: system-ui, sans-serif; background:var(--background); color:var(--foreground); line-height:1.5; }
-      header { position:sticky; top:0; z-index:10; background:var(--background); border-bottom:1px solid var(--border); padding:0.5rem 1rem; display:flex; justify-content:center; align-items:center; }
-      header nav { display:flex; gap:1rem; }
-      header a { text-decoration:none; color:inherit; padding:0.25rem 0.5rem; }
-      header a:hover, header a:focus { color:var(--accent); }
-      .theme-toggle { position:absolute; left:1rem; background:none; border:1px solid var(--border); border-radius:4px; padding:0.25rem 0.5rem; cursor:pointer; color:inherit; }
-      main { max-width: 900px; margin:0 auto; padding:2rem 1rem 4rem; }
-      .hero h1 { font-size: 2.2rem; margin: 0 0 0.5rem 0; }
-      .bio { font-size:1.05rem; color:#666; }
-      .contacts { margin-top: 1rem; }
-      .contacts a { text-decoration:none; color:inherit; border:1px solid var(--border); border-radius:4px; padding:0.25rem 0.5rem; margin-right:0.5rem; }
-      .contacts a:hover, .contacts a:focus { border-color:var(--accent); }
-      .section-title { margin-top:3rem; font-size:1.6rem; }
-      .project-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
-      .project-card { border:1px solid var(--border); padding:1rem; display:flex; flex-direction:column; gap:0.5rem; }
-      .project-card h3 { margin:0; font-size:1.2rem; }
-      .project-card img { width:100%; height:auto; border:1px solid var(--border); }
-      .chip { border:1px solid var(--border); border-radius:999px; padding:0.1rem 0.6rem; font-size:0.8rem; margin-right:0.25rem; }
-      footer { padding: 3rem 1rem; text-align:center; border-top:1px solid var(--border); }
-    </style>
-  </head>
-  <body>
-    <main>
-      <section id="home" class="hero">
-        <h1>{{ site.author_name }}</h1>
-        <p class="bio">{{ site.author_bio }}</p>
-        <div class="contacts">
-          <a href="mailto:{{ site.email }}">Email</a>
-          <a href="https://github.com/{{ site.github }}" rel="me">GitHub</a>
-          <a href="https://x.com/{{ site.x_handle }}" rel="me">X</a>
-        </div>
-      </section>
-
-      <section id="projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="project-grid">
-          {% assign items = site.projects | sort: 'order' %}
-          {% for project in items %}
-          <article class="project-card">
-            {% if project.image %}
-              <img src="{{ project.image }}" alt="{{ project.image_alt | default: project.title }}" />
-            {% endif %}
-            <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
-            {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
-            {% if project.tags %}
-              <div>
-                {% for tag in project.tags %}<span class="chip">{{ tag }}</span>{% endfor %}
-              </div>
-            {% endif %}
-          </article>
-          {% endfor %}
-        </div>
-      </section>
-    </main>
-    <footer>
-      <small>© {{ site.author_name }}</small>
-    </footer>
-    <script>
-      const toggle = document.getElementById("theme-toggle");
-      const root = document.documentElement;
-      const stored = localStorage.getItem("theme");
-      if (stored === "dark" || (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-        root.classList.add("dark");
-      }
-      if (toggle) {
-        toggle.addEventListener("click", () => {
-          root.classList.toggle("dark");
-          const theme = root.classList.contains("dark") ? "dark" : "light";
-          localStorage.setItem("theme", theme);
-        });
-      }
-    </script>
-  </body>
-  </html>
+<head>
+  <meta charset="utf-8" />
+  <title>kevin — Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>kevin</h1>
+    <p class="bio">i write software with purpose. for me, building is about shaping ideas into tools that make life simpler and more meaningful. each project is a reflection of curiosity, imagination, and the pursuit of happiness. this space is where i share what i create — ongoing explorations of how technology can align with thought, design, and intent.</p>
+    <nav class="contacts">
+      <a href="mailto:hello@example.com">Email</a>
+      <a href="https://github.com/your-github-username">GitHub</a>
+      <a href="https://x.com/your-x-handle">X</a>
+    </nav>
+  </header>
+  <main class="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <a href="projects/note-widget.html">Note Widget</a>
+        <p>One note, always visible on the home screen.</p>
+      </li>
+      <li>
+        <a href="projects/resume-generator.html">Résumé Generator</a>
+        <p>Opinionated generator for clear, useful résumés.</p>
+      </li>
+    </ul>
+  </main>
+  <footer>
+    <small>© kevin</small>
+  </footer>
+</body>
+</html>
