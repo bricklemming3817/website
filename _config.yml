@@ -1,0 +1,32 @@
+title: "Meaningful Software"
+description: "TBR builds meaningful software with clarity, usefulness, and care."
+url: "" # set to your site URL when known
+baseurl: "" # leave empty for user/organization pages
+
+# Build settings
+markdown: kramdown
+theme: null
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Defaults for collections
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+# Profile settings (update these)
+author_name: "kevin"
+author_bio: |-
+  i write software with purpose. for me, building is about shaping ideas into tools that make life simpler and more meaningful. each project is a reflection of curiosity, imagination, and the pursuit of happiness.
+
+  this space is where i share what i create — ongoing explorations of how technology can align with thought, design, and intent.
+email: "hello@example.com"
+github: "your-github-username"
+x_handle: "your-x-handle"
