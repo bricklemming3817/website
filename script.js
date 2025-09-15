@@ -98,6 +98,18 @@
   };
   try { document.addEventListener('wheel', onWheel, { passive: false }); } catch { document.addEventListener('wheel', onWheel); }
 
+  // desktop fallback: when revealed, any upward scroll position change restores
+  // handles scrollbar drags and non-wheel scrolling
+  let lastScrollY = window.scrollY;
+  const onScroll = () => {
+    const y = window.scrollY;
+    if (state.revealed && y < lastScrollY - 1) {
+      hideSecret();
+    }
+    lastScrollY = y;
+  };
+  document.addEventListener('scroll', onScroll, { passive: true });
+
   // keyboard fallback at bottom
   document.addEventListener('keydown', (e) => {
     const key = e.key;
