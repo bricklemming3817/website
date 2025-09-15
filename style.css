@@ -61,8 +61,10 @@ header {
 .bio {
   color: var(--muted);
   max-width: 60ch;
-  margin: 0.75rem auto 0;
+  margin: 0.75rem 0 0;
   font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+  text-align: center;
+  display: inline-block;
 }
 .contacts {
   margin-top: 1rem;

@@ -14,15 +14,75 @@
 
   const isInteractive = (el) => !!el.closest('a, button, input, textarea, select, summary, [contenteditable="true"]');
 
-  // Hidden activation: first pointer down on non-interactive text enables edit mode
+  const TOUCH_ACTIVATE_MOVE_TOLERANCE = 10;
+  const touchEditState = {
+    pointerId: null,
+    x: 0,
+    y: 0,
+  };
+  const clearTouchCandidate = () => {
+    touchEditState.pointerId = null;
+  };
+
+  // Hidden activation: on touch wait for an intentional tap; desktop still activates immediately
   document.addEventListener(
     'pointerdown',
     (e) => {
       if (inEdit()) return;
       const t = e.target;
+      if (isInteractive(t)) {
+        clearTouchCandidate();
+        return;
+      }
+
+      const type = e.pointerType || '';
+      if (type === 'touch' || type === 'pen') {
+        touchEditState.pointerId = e.pointerId;
+        touchEditState.x = e.clientX;
+        touchEditState.y = e.clientY;
+        return;
+      }
+
+      clearTouchCandidate();
+      enable();
+      // do not prevent default; we want the caret to appear at click
+    },
+    true
+  );
+
+  document.addEventListener(
+    'pointermove',
+    (e) => {
+      if (touchEditState.pointerId == null || e.pointerId !== touchEditState.pointerId) return;
+      if (
+        Math.abs(e.clientX - touchEditState.x) > TOUCH_ACTIVATE_MOVE_TOLERANCE ||
+        Math.abs(e.clientY - touchEditState.y) > TOUCH_ACTIVATE_MOVE_TOLERANCE
+      ) {
+        clearTouchCandidate();
+      }
+    },
+    true
+  );
+
+  document.addEventListener(
+    'pointerup',
+    (e) => {
+      if (touchEditState.pointerId == null || e.pointerId !== touchEditState.pointerId) return;
+      clearTouchCandidate();
+      if (inEdit()) return;
+      const t = e.target;
       if (!isInteractive(t)) {
         enable();
-        // do not prevent default; we want the caret to appear at click
+      }
+    },
+    true
+  );
+
+  document.addEventListener(
+    'pointercancel',
+    (e) => {
+      if (touchEditState.pointerId != null && e.pointerId === touchEditState.pointerId) {
+        clearTouchCandidate();
       }
     },
     true
@@ -58,7 +118,10 @@
   });
 
   // ——— bottom overscroll easter egg ———
-  const state = { revealed: false, touchStartY: null };
+  const state = { revealed: false, touchStartY: null, wheelOverscroll: 0 };
+  const TOUCH_REVEAL_DISTANCE = 120;
+  const TOUCH_HIDE_DISTANCE = 40;
+  const WHEEL_REVEAL_DISTANCE = 160;
   const prefersReduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const docEl = document.documentElement;
 
@@ -85,15 +148,27 @@
 
   // desktop overscroll via wheel
   const onWheel = (e) => {
-    if (atBottom() && e.deltaY > 0 && !state.revealed) {
-      e.preventDefault();
-      revealSecret();
-      return;
+    if (!state.revealed) {
+      if (atBottom()) {
+        if (e.deltaY > 0) {
+          state.wheelOverscroll = Math.max(0, state.wheelOverscroll + e.deltaY);
+          if (state.wheelOverscroll >= WHEEL_REVEAL_DISTANCE) {
+            e.preventDefault();
+            revealSecret();
+            state.wheelOverscroll = 0;
+          }
+          return;
+        }
+        state.wheelOverscroll = 0;
+      } else {
+        state.wheelOverscroll = 0;
+      }
     }
+
     if (state.revealed && e.deltaY < 0) {
       e.preventDefault();
       hideSecret();
-      return;
+      state.wheelOverscroll = 0;
     }
   };
   try { document.addEventListener('wheel', onWheel, { passive: false }); } catch { document.addEventListener('wheel', onWheel); }
@@ -132,10 +207,10 @@
     const y = e.touches && e.touches[0] ? e.touches[0].clientY : null;
     if (state.touchStartY != null && y != null) {
       const dy = y - state.touchStartY; // negative when swiping up, positive when pulling down
-      if (!state.revealed && atBottom() && dy < -16) {
+      if (!state.revealed && atBottom() && dy < -TOUCH_REVEAL_DISTANCE) {
         try { e.preventDefault(); } catch {}
         revealSecret();
-      } else if (state.revealed && dy > 16) {
+      } else if (state.revealed && dy > TOUCH_HIDE_DISTANCE) {
         try { e.preventDefault(); } catch {}
         hideSecret();
       }
