@@ -26,7 +26,7 @@ runtime behavior
 - hidden edit mode (easter egg): first click on any non-interactive text turns the entire page editable (`contenteditable`). in edit mode, link navigation is blocked to prevent losing edits. press `esc` to exit. refresh resets all edits—no persistence.
 - lowercase aesthetic: all text is rendered in lowercase via a global css rule (`body { text-transform: lowercase; }`). document titles and visible tooltips are also lowercase.
 - dark mode: colors adapt automatically via css variables overridden under `@media (prefers-color-scheme: dark)`.
-- bottom overscroll reveal: at page bottom, attempting to scroll beyond the end (desktop wheel) or overscroll on mobile reveals a centered secret message and instantly hides the site content (no animation). scrolling back up restores the original page. desktop fallback: `↓`/space at bottom reveals; `↑`/page up/shift+space restores. secret message: “after all is said and done, what humans really crave is simply to love and be loved”.
+- bottom overscroll reveal: at page bottom, attempting to scroll beyond the end (desktop wheel) or overscroll on mobile reveals a centered secret message and instantly hides the site content (no animation). scrolling back up restores the original page. desktop fallback: `↓` at bottom reveals; `↑`/page up/shift+space restores. secret message: “after all is said and done, what humans really crave is simply to love and be loved”.
 
 design system (in `style.css`)
 

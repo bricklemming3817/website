@@ -113,7 +113,7 @@
   // keyboard fallback at bottom
   document.addEventListener('keydown', (e) => {
     const key = e.key;
-    if (!state.revealed && atBottom() && (key === 'ArrowDown' || key === ' ' || key === 'Spacebar')) {
+    if (!state.revealed && atBottom() && key === 'ArrowDown') {
       e.preventDefault();
       revealSecret();
       return;
