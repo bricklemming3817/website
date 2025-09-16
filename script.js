@@ -1,15 +1,37 @@
 (() => {
   const EDIT_ATTR = 'data-edit-mode';
 
+  let blankEditMode = false;
+  const setBlankMode = (on, forced) => {
+    blankEditMode = on;
+    if (on) {
+      document.body.setAttribute('data-edit-blank', 'true');
+      if (forced) {
+        document.body.setAttribute('data-edit-blank-forced', 'true');
+      } else {
+        document.body.removeAttribute('data-edit-blank-forced');
+      }
+    } else {
+      document.body.removeAttribute('data-edit-blank');
+      document.body.removeAttribute('data-edit-blank-forced');
+    }
+  };
+  const isBodyStructurallyEmpty = () => document.body.children.length === 0 && ((document.body.textContent || '').trim().length === 0);
+  const ensureBlankMode = () => {
+    if (!blankEditMode && isBodyStructurallyEmpty()) setBlankMode(true, false);
+  };
+
   const inEdit = () => document.body.getAttribute(EDIT_ATTR) === 'on';
   const enable = () => {
     document.body.setAttribute(EDIT_ATTR, 'on');
     document.body.contentEditable = 'true';
     document.body.focus();
+    setBlankMode(isBodyStructurallyEmpty(), false);
   };
   const disable = () => {
     document.body.removeAttribute(EDIT_ATTR);
     document.body.contentEditable = 'false';
+    setBlankMode(false, false);
   };
 
   const isInteractive = (el) =>
@@ -29,14 +51,22 @@
   document.addEventListener(
     'pointerdown',
     (e) => {
-      if (inEdit()) return;
       const t = e.target;
+      const type = e.pointerType || '';
+
+      if (inEdit()) {
+        if ((type === 'touch' || type === 'pen') && isInteractive(t)) {
+          disable();
+          clearTouchCandidate();
+        }
+        return;
+      }
+
       if (isInteractive(t)) {
         clearTouchCandidate();
         return;
       }
 
-      const type = e.pointerType || '';
       if (type === 'touch' || type === 'pen') {
         touchEditState.pointerId = e.pointerId;
         touchEditState.x = e.clientX;
@@ -74,6 +104,11 @@
       const t = e.target;
       if (!isInteractive(t)) {
         enable();
+        if (isBodyStructurallyEmpty()) {
+          document.body.setAttribute('data-edit-blank-trigger', 'true');
+        } else {
+          document.body.removeAttribute('data-edit-blank-trigger');
+        }
       }
     },
     true
@@ -84,6 +119,20 @@
     (e) => {
       if (touchEditState.pointerId != null && e.pointerId === touchEditState.pointerId) {
         clearTouchCandidate();
+      }
+    },
+    true
+  );
+
+  document.addEventListener(
+    'input',
+    () => {
+      if (!inEdit()) return;
+      if (document.body.hasAttribute('data-edit-blank-trigger')) {
+        document.body.removeAttribute('data-edit-blank-trigger');
+        setBlankMode(true, true);
+      } else {
+        ensureBlankMode();
       }
     },
     true

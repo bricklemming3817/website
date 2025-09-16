@@ -41,6 +41,25 @@ body {
   text-transform: lowercase;
 }
 
+body[data-edit-blank],
+body[data-edit-blank-forced] {
+  font-size: clamp(2rem, 6vw, 3rem);
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  text-transform: none;
+}
+
+body[data-edit-blank],
+body[data-edit-blank-forced],
+body[data-edit-blank] *,
+body[data-edit-blank-forced] * {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  letter-spacing: inherit !important;
+  text-transform: inherit !important;
+  font-weight: inherit !important;
+}
+
 /* Typography */
 h1, h2, h3 { line-height: 1.2; margin: 0 0 0.5rem; }
 h1 { font-size: clamp(2rem, 6vw, 3rem); letter-spacing: -0.02em; }
