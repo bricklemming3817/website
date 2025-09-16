@@ -58,6 +58,7 @@
         if ((type === 'touch' || type === 'pen') && isInteractive(t)) {
           disable();
           clearTouchCandidate();
+          return;
         }
         return;
       }
@@ -102,13 +103,17 @@
       clearTouchCandidate();
       if (inEdit()) return;
       const t = e.target;
-      if (!isInteractive(t)) {
-        enable();
-        if (isBodyStructurallyEmpty()) {
-          document.body.setAttribute('data-edit-blank-trigger', 'true');
-        } else {
-          document.body.removeAttribute('data-edit-blank-trigger');
-        }
+      const interactive = isInteractive(t);
+      if (interactive) {
+        if (isBodyStructurallyEmpty()) setBlankMode(false, false);
+        return;
+      }
+
+      enable();
+      if (isBodyStructurallyEmpty()) {
+        document.body.setAttribute('data-edit-blank-trigger', 'true');
+      } else {
+        document.body.removeAttribute('data-edit-blank-trigger');
       }
     },
     true
