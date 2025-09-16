@@ -140,14 +140,27 @@
   };
 
   const detectOS = () => {
+    const data = navigator.userAgentData;
+    if (data?.platform) {
+      const platform = data.platform.toLowerCase();
+      if (platform.includes('win')) return { label: 'Windows', key: 'windows' };
+      if (platform.includes('mac')) return { label: 'macOS', key: 'mac' };
+      if (platform.includes('ios')) return { label: 'iOS', key: 'ios' };
+      if (platform.includes('android')) return { label: 'Android', key: 'android' };
+      if (platform.includes('linux')) return { label: 'Linux', key: 'linux' };
+    }
+
     const ua = navigator.userAgent;
+    const platform = navigator.platform || '';
+    const maxTouch = navigator.maxTouchPoints || 0;
+    const isIOSLike = /iphone|ipod|ipad/i.test(ua) || (platform === 'MacIntel' && maxTouch > 1);
+    if (isIOSLike) return { label: 'iOS', key: 'ios' };
+    if (/android/i.test(ua)) return { label: 'Android', key: 'android' };
     if (/windows nt 1[0-2]/i.test(ua)) return { label: 'Windows 10/11', key: 'windows' };
     if (/windows nt/i.test(ua)) return { label: 'Windows', key: 'windows' };
-    if (/mac os x/i.test(ua)) return { label: 'macOS', key: 'mac' };
-    if (/iphone|ipad|ipod/i.test(ua)) return { label: 'iOS', key: 'ios' };
-    if (/android/i.test(ua)) return { label: 'Android', key: 'android' };
+    if (/mac os x|macintosh/i.test(ua)) return { label: 'macOS', key: 'mac' };
     if (/linux/i.test(ua)) return { label: 'Linux', key: 'linux' };
-    return { label: navigator.platform || 'Unknown', key: 'other' };
+    return { label: platform || 'Unknown', key: 'other' };
   };
 
   const detectDevice = () => {
@@ -155,8 +168,12 @@
       return navigator.userAgentData.mobile ? { label: 'Mobile', key: 'mobile' } : { label: 'Desktop', key: 'desktop' };
     }
     const ua = navigator.userAgent;
-    if (/tablet|ipad/i.test(ua)) return { label: 'Tablet', key: 'tablet' };
-    if (/mobi/i.test(ua)) return { label: 'Mobile', key: 'mobile' };
+    const platform = navigator.platform || '';
+    const maxTouch = navigator.maxTouchPoints || 0;
+    const isIPad = /ipad/i.test(ua) || (platform === 'MacIntel' && maxTouch > 1);
+    const isIPhone = /iphone|ipod/i.test(ua);
+    if (isIPad) return { label: 'Tablet', key: 'tablet' };
+    if (isIPhone || /android/i.test(ua) || /mobile/i.test(ua)) return { label: 'Mobile', key: 'mobile' };
     return { label: 'Desktop', key: 'desktop' };
   };
 
